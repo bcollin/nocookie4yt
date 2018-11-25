@@ -1,0 +1,101 @@
+= Youtube-nocookie embed =
+
+== Comparison with other plugins ==
+
+Name: Youtube No-Cookie Embed
+Machine readable name: yt-no-cookie-embed
+Nocookie? YES
+Responsive? YES (can be enabled)
+Aspect ratio? NO
+Size (unzipped): 51 KB
+Regex: ~(?:http|https|)(?::\/\/|)(?:www.|)(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/ytscreeningroom\?v=|\/feeds\/api\/videos\/|\/user\S*[^\w\-\s]|\S*[^\w\-\s]))([\w\-]{11})[a-z0-9;:@#?&%=+\/\$_.-]*~i
+Remarks: 
+- Beefy because the author decided to add localization, all kinds of unnecessary OO goop and an admin interface.
+- Not stand-alone, requires something called Fusion Builder.
+
+
+Name: Youtube Privacy
+Machine readable name: youtube-privacy
+Nocookie? YES
+Responsive? NO (lacks wrapper object)
+Aspect ratio? NO (assumes 16:9)
+Size (unzipped): 6 KB
+Regex: #http://(?:www\.youtube\.com\/watch\?v\=|youtu\.be\/)([a-z0-9_-]+)(?:(?:(?:\?|&)(.+))|(\#t=.+))*#i
+Remarks: 
+- Supports HTTPS output.
+- Does not support many Youtube URL formats.
+- Supports both 'object' and 'iframe' elements.
+- Calculates dimensions based on a 16:9 aspect ratio.
+- Is 'old', apparently? Ah yes, "Last updated: 7 years ago" according to https://wordpress.org/support/plugin/youtube-privacy.
+
+
+Name: YouTube-Nocookie
+Machine readable name: youtube-nocookie
+Nocookie? NO
+Responsive? NO
+Aspect ratio? NO
+Size (unzipped): 23 KB
+Regex: /youtube\.com/s
+Remarks: 
+- Size above is exagerated, most is a license.TXT.
+- Misses most URL's.
+- Can't deal with ?v/v.
+
+
+Name: Simple YouTube Responsive
+Machine readable name: simple-youtube-responsive
+Nocookie? 
+Responsive? YES
+Aspect ratio? YES
+Size (unzipped): 11 KB
+Regex: n/a
+Remarks: 
+- Supports AMP (Google's bizarre attempt to make leaner webpages by adding huge overhead to them).
+- Based on shortcodes of the form [youtube v="VID"], you cannot just dump a link.
+
+
+Name: Responsive Video Embeds
+Machine readable name: responsive-video-embeds
+Nocookie? 
+Responsive? 
+Aspect ratio? 
+Size (unzipped): 103 KB
+Regex: 
+Remarks: 
+- Size above is exagerated, most is a screenshot.
+- Supports more video providers than just Youtube.
+- Seems to require Javascript for some reason.
+
+
+
+Evaluation: 
+
+The 2 responsive plugins deal with responsiveness, and I don't see a quick way to hook youtube-nocookie in (especially since they aren't really interested in what a Youtube URL looks like - a missed opportunity, if you ask me).
+
+YouTube-Nocookie seems pretty much useless, it does one thing and it does one thing badly.
+
+Youtube No-Cookie Embed, by its own admission, only works together with another tool, and it would be silly to install that tool just for nocookie behaviour.
+
+Youtube Privacy does some weird things with aspect ratio, but is otherwise well-programmed and complete. It lacks a wrapper for responsiveness though.
+
+I like how it advertises HTTPS, maybe I should mention this in the manual.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
