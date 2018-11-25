@@ -37,32 +37,32 @@ The plugin provides the following functionality:
 
 ### Responsive videos 
 
-Add the following to your stylesheet for responsive videos: 
+Add the following to your stylesheet for responsive videos. 
 
 The following CSS will make it so the iframe spans the width of its container and that the height is derived from that width using a sensible formula.
 
-.videowrapper {
-	display: block;
-	position: relative;
-	height: 0; /* Gives IE 5 and IE 6 'lay-out'. */
-	padding-bottom: 56.25%; /* Default to 16:9 aspect ratio. */
-}
+    .videowrapper {
+      display: block;
+	  position: relative;
+	  height: 0; /* Gives IE 5 and IE 6 'lay-out'. */
+	  padding-bottom: 56.25%; /* Default to 16:9 aspect ratio. */
+    }
 
-.videowrapper iframe {
-	border: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+    .videowrapper iframe {
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
 A 16:9 aspect ratio is a good guess for Youtube videos, as this is the default for computers, but in case you need a different aspect ratio, you can use the class names provided by the plugin:
 
-.videowrapper.aspect_ratio_500 { padding-bottom: 50%;    /* 2:1 */ }
-.videowrapper.aspect_ratio_541 { padding-bottom: 54.05%; /* 1.85:1 */ }
-.videowrapper.aspect_ratio_563 { padding-bottom: 56.25%; /* 16:9 */ }
-.videowrapper.aspect_ratio_750 { padding-bottom: 75%;    /* 4:3 */ }
+    .videowrapper.aspect_ratio_500 { padding-bottom: 50%;    /* 2:1 */ }
+    .videowrapper.aspect_ratio_541 { padding-bottom: 54.05%; /* 1.85:1 */ }
+    .videowrapper.aspect_ratio_563 { padding-bottom: 56.25%; /* 16:9 */ }
+    .videowrapper.aspect_ratio_750 { padding-bottom: 75%;    /* 4:3 */ }
 
 See https://support.google.com/youtube/answer/6375112 for more info on Youtube's aspect ratios.
 
@@ -71,15 +71,10 @@ See https://support.google.com/youtube/answer/6375112 for more info on Youtube's
 ## Installation 
 
 1. Check if you are running the Shortcode Embeds module of the Jetpack plugin. The Youtube No Cookie plugin will not work with it.
-
 1.a. If you do run that plugin (it is enabled by default when you install Jetpack) and you don't intend to use its functionality, disable it.
-
 2. Put the directory containing Youtube No Cookie into the plugins directory of your Wordpress website: wp-content/plugins.
-
 3. In the administration interface of your Wordpress website, go to Plugins.
-
 4. Locate the entry called Youtube No Cookie and click Activate.
-
 5. That is it.
 
 

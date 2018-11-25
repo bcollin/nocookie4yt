@@ -49,7 +49,7 @@ The plugin provides the following functionality:
 
 = Responsive videos =
 
-Add the following to your stylesheet for responsive videos: 
+Add the following to your stylesheet for responsive videos.
 
 The following CSS will make it so the iframe spans the width of its container and that the height is derived from that width using a sensible formula.
 
