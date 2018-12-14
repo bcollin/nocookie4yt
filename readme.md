@@ -31,6 +31,7 @@ This plugin in turn makes it so you can safely drop Youtube URLs in your posts a
 The plugin provides the following functionality: 
 
 * Turns regular Youtube video embeds into Youtube privacy-enhanced video embeds.
+  * This also appears to work with the embed blocks in the Gutenberg editor.
 * Adds class names that help you determine the aspect ratio of the video.
 * Adds a wrapper element, so that you can make responsive videos (see below).
 

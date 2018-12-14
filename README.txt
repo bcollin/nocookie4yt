@@ -2,7 +2,7 @@
 Contributors: hatesspam
 Tags: youtube, video, embeds, embed, cookies, privacy
 Requires at least: 2.9.0
-Tested up to: 4.9.8
+Tested up to: 5.0.1
 Stable tag: 0.1
 Requires PHP: 5.4
 License: GPL3
@@ -41,6 +41,8 @@ This plugin in turn makes it so you can safely drop Youtube URLs in your posts a
 The plugin provides the following functionality: 
 
 * Turns regular Youtube video embeds into Youtube privacy-enhanced video embeds.
+
+  * This also appears to work with the embed blocks in the Gutenberg editor.
 
 * Adds class names that help you determine the aspect ratio of the video.
 
