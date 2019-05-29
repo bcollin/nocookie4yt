@@ -82,6 +82,11 @@ See https://support.google.com/youtube/answer/6375112 for more info on Youtube's
 
 ## Changelog 
 
+### 0.1.1 
+
+* Now only works on Youtube URLs.
+* Now no longer calculates the aspect ration if height or width are 0.
+
 ### 0.1 
 
 * First release.

@@ -31,6 +31,12 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function yt_nocookie_video_embed_handler( $html, $url, $attr ) {
 
+  $segments = parse_url($url);
+	$is_yt = preg_match('/youtube\.com$/', $segments['host']);
+	if ( !$is_yt ) {
+		return $html;
+  }
+
 	$aspect_ratio = 0;
   $out = '';
 
@@ -108,7 +114,7 @@ function yt_nocookie_wrap_iframe( $html = '', $aspect_ratio = '0' ) {
  */
 function yt_nocookie_get_aspect_ratio( $width = 16, $height = 9 ) {
 
-	if ( $width < 0 || $height < 0 ) {
+	if ( $width < 1 || $height < 1 ) {
 		return '0';
 	}
 
