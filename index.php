@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Youtube No Cookie
+Plugin Name: No Cookie for Youtube
 Description: Lets you drop a regular Youtube video link into your post and will turn this link into a privacy enhanced embed when shown to visitors.
 Version: 0.1
 Author: Branko Collin
@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @return string The altered HTML.
  * 
  */
-function yt_nocookie_video_embed_handler( $html, $url, $attr ) {
+function nocookie4yt_video_embed_handler( $html, $url, $attr ) {
 
   $segments = parse_url($url);
 	$is_yt = preg_match('/youtube\.com$/', $segments['host']);
@@ -62,17 +62,17 @@ function yt_nocookie_video_embed_handler( $html, $url, $attr ) {
 	}
 
 	if ( ( 0 !== $width ) && ( 0 !== $height ) ) {
-		$aspect_ratio = yt_nocookie_get_aspect_ratio( $width, $height );
+		$aspect_ratio = nocookie4yt_get_aspect_ratio( $width, $height );
 	}
 
 	$out = str_replace( 'youtube.com/embed', 'youtube-nocookie.com/embed', $html );
-	$out = yt_nocookie_wrap_iframe( $out, $aspect_ratio );
+	$out = nocookie4yt_wrap_iframe( $out, $aspect_ratio );
 
 	return $out;
 }
 
 // Filters embedded videos.
-add_filter( 'embed_oembed_html', 'yt_nocookie_video_embed_handler', 10, 3 );
+add_filter( 'embed_oembed_html', 'nocookie4yt_video_embed_handler', 10, 3 );
 
 
 
@@ -86,7 +86,7 @@ add_filter( 'embed_oembed_html', 'yt_nocookie_video_embed_handler', 10, 3 );
  * @return string Altered HTML.
  *
  */
-function yt_nocookie_wrap_iframe( $html = '', $aspect_ratio = '0' ) {
+function nocookie4yt_wrap_iframe( $html = '', $aspect_ratio = '0' ) {
 
 	$out = '';
 	$arclass = 'aspect_ratio_' . $aspect_ratio;
@@ -112,7 +112,7 @@ function yt_nocookie_wrap_iframe( $html = '', $aspect_ratio = '0' ) {
  *       and '999'. On error, the string returned will be '0'.
  *
  */
-function yt_nocookie_get_aspect_ratio( $width = 16, $height = 9 ) {
+function nocookie4yt_get_aspect_ratio( $width = 16, $height = 9 ) {
 
 	if ( $width < 1 || $height < 1 ) {
 		return '0';
