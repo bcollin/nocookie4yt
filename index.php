@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: No Cookie for Youtube
-Description: Lets you drop a regular Youtube video link into your post and will turn this link into a privacy enhanced embed when shown to visitors.
+Description: Adds a filter that replaces the source link in Youtube video embeds to one that uses the youtube-nocookie.com domain. This postpones Youtube setting cookies on your visitors' device until they click 'play'.
 Version: 0.1
 Author: Branko Collin
 Author URI: http://www.abeleto.nl
@@ -148,7 +148,7 @@ function yt_cookie_jetpack_error() {
 	$jetpack_settings = get_site_url() . '/wp-admin/admin.php?page=jetpack_modules#related-posts';
 	?>
 	<div class="notice notice-error is-dismissible">
-	<p>The Jetpack Shortcodes Embed module is enabled. That means that the Youtube No Cookie plugin won't work and that the privacy of your visitors is at risk. <a href="<?php print $jetpack_settings; ?>">Disable the Jetpack Shortcodes Embed module</a>, or better yet, take Jetpack out back and burn it.*</p> 
+	<p>The Jetpack Shortcodes Embed module is enabled. That means that the No Cookie for Youtube plugin won't work. <a href="<?php print $jetpack_settings; ?>">Disable the Jetpack Shortcodes Embed module</a>, or better yet, take Jetpack out back and burn it.*</p> 
 	<p>*) Note: only burn Jetpack if you don't need Jetpack anymore.</p> 
 	</div>
 	<?php
