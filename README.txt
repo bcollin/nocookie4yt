@@ -1,6 +1,6 @@
-=== Youtube No Cookie ===
+=== No Cookie for Youtube ===
 Contributors: hatesspam
-Tags: youtube, video, embeds, embed, cookies, privacy
+Tags: youtube, video, embeds, embed, cookies
 Requires at least: 2.9.0
 Tested up to: 5.0.1
 Stable tag: 0.1
@@ -8,7 +8,7 @@ Requires PHP: 5.4
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Lets you drop a regular Youtube video link into your post and will turn this link into a privacy enhanced embed when shown to visitors.
+Lets you drop a regular Youtube video link into a Wordpress post and will turn this link into a privacy enhanced embed when shown to visitors.
 
 
 

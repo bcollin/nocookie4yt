@@ -1,6 +1,6 @@
-# Youtube No Cookie 
+# No Cookie for Youtube
 
-Lets you drop a regular Youtube video link into your post and will turn this link into a privacy enhanced embed when shown to visitors.
+Lets you drop a regular Youtube video link into your Wordpress post and will turn this link into a privacy enhanced embed when shown to visitors.
 
 ## Description 
 
