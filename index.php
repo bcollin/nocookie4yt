@@ -31,8 +31,17 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function nocookie4yt_video_embed_handler( $html, $url, $attr ) {
 
+	// The URL must match the following statements in order to be 
+	// valid: 
+	// - Must be a valid Youtube Oembed link 
+	//      (see: https://oembed.com/providers.json).
+	// - Must be a valid Wordpress embed link 
+	//      (see: wp-includes/class-wp-oembed.php).
+	// - Must be able to convert to a no-cookie link (test manually).
+	//
+	// For now, we settle for the following: 
   $segments = parse_url($url);
-	$is_yt = preg_match('/youtube\.com$/', $segments['host']);
+	$is_yt = preg_match('/^((m|www)\.)?youtube\.com|youtu\.be$/i', $segments['host']);
 	if ( !$is_yt ) {
 		return $html;
   }

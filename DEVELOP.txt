@@ -1,0 +1,40 @@
+
+This plugin does not provide its own Oembed providers, but rather filters existing embeds.
+
+== Valid URLs ==
+
+In order for an embed that was passed to nocookie4yt_video_embed_handler() to be re-wrapped, it must pass three tests: 
+
+1. It must be a valid Youtube Oembed provider. 
+
+2. It must be a valid Wordpress Youtube embed.
+
+3. It must be able to convert to a playable no-cookie video.
+
+Re #1:
+
+Valid Youtube Oembed endpoints are listed in https://oembed.com/providers.json as follows: 
+
+	- https://*.youtube.com/watch*
+
+	- https://*.youtube.com/v/*
+
+	- https://youtu.be/*
+	
+This suggests that only HTTPS works and that any sub-domain works. 
+
+Re #2:
+
+Valid Wordpress Youtube embeds are listed in wp-includes/class-wp-oembed.php as follows: 
+
+	- #https?://((m|www)\.)?youtube\.com/watch.*#i
+	
+	- #https?://((m|www)\.)?youtube\.com/playlist.*#i
+	
+	- #https?://youtu\.be/.*#i
+
+This list is not exhaustive. Wordpress will generally look for Oembed links in the source code of the page behind the URL (Oembed discovery) if it cannot match the URL with one of the patterns above.
+
+Re #3: 
+
+I currently do not maintain a list, or know of one, of Youtube URLs that won't result in a no-cookie link.
