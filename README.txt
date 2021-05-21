@@ -102,6 +102,10 @@ See https://support.google.com/youtube/answer/6375112 for more info on Youtube's
 
 == Changelog ==
 
+= 0.2.1 =
+
+* Restored youtu.be support.
+
 = 0.2 =
 
 * Renamed the plugin from Youtube Nocookie to No Cookie for Youtube.

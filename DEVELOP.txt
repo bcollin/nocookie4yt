@@ -21,11 +21,11 @@ Valid Youtube Oembed endpoints are listed in https://oembed.com/providers.json a
 
 	- https://youtu.be/*
 	
-This suggests that only HTTPS works and that any sub-domain works. 
+This suggests that only HTTPS works and that any sub-domain works. In reality HTTP also works.
 
 Re #2:
 
-Valid Wordpress Youtube embeds are listed in wp-includes/class-wp-oembed.php as follows: 
+Sanctioned Wordpress Youtube embeds are listed in wp-includes/class-wp-oembed.php as follows: 
 
 	- #https?://((m|www)\.)?youtube\.com/watch.*#i
 	
@@ -34,6 +34,8 @@ Valid Wordpress Youtube embeds are listed in wp-includes/class-wp-oembed.php as 
 	- #https?://youtu\.be/.*#i
 
 This list is not exhaustive. Wordpress will generally look for Oembed links in the source code of the page behind the URL (Oembed discovery) if it cannot match the URL with one of the patterns above.
+
+These unsanctioned embeds are less capable, but it doesn't seem to make much of a difference for Youtube embeds.
 
 Re #3: 
 
