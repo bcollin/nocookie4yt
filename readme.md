@@ -41,7 +41,9 @@ The No Cookie for Youtube plugin provides the following functionality:
 
 ### Responsive videos 
 
-Add the following to your stylesheet for responsive videos. 
+If you are using the Gutenberg editor (the default since Wordpress 5) and a theme that supports 'responsive-embeds', you are all set.
+
+If on the other hand you cannot change the theme of your website or if you use an editor other than Gutenberg, you can add the following to your stylesheet to make your videos responsive.
 
 The following CSS will make it so the iframe spans the width of its container and that the height is derived from that width using a sensible formula.
 
@@ -69,6 +71,8 @@ A 16:9 aspect ratio is a good guess for Youtube videos, as this is the default f
     .videowrapper.aspect_ratio_750 { padding-bottom: 75%;    /* 4:3 */ }
 
 See https://support.google.com/youtube/answer/6375112 for more info on Youtube's aspect ratios.
+
+See https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content for more info on Wordpress' support for responsive embeds.
 
 
 
