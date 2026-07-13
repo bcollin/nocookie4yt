@@ -2,7 +2,7 @@
 Contributors: hatesspam
 Tags: youtube, video, embeds, embed, cookies
 Requires at least: 2.9.0
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 0.2
 Requires PHP: 5.4
 License: GPL3
